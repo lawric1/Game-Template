@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/UI/Menu/Level Selection/level_selection.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/UI/Menu/Level Selection/level icon2.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/Menu/Level Selection/level icon.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/monogram dynamic.tres" type="DynamicFont" id=5]
+
+[node name="LevelSelection" type="Control"]
+margin_right = 320.0
+margin_bottom = 180.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+normal_icon_texture = ExtResource( 3 )
+selected_icon_texture = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -44.0
+margin_top = -34.0
+margin_right = 378.0
+margin_bottom = 225.0
+color = Color( 0.152941, 0.105882, 0.227451, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.0
+margin_top = -38.0
+margin_right = 48.0
+margin_bottom = 38.0
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Label" parent="."]
+margin_left = 148.0
+margin_top = 140.165
+margin_right = 188.0
+margin_bottom = 154.165
+custom_fonts/font = ExtResource( 5 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}

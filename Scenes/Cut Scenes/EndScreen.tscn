@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[node name="EndScreen" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -44.0
+margin_top = -34.0
+margin_right = 378.0
+margin_bottom = 225.0
+color = Color( 0.0862745, 0.0588235, 0.113725, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icon" type="Sprite" parent="."]
+position = Vector2( 82.8168, 73.8507 )
+texture = ExtResource( 1 )
