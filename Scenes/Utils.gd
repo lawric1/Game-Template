@@ -36,3 +36,9 @@ func choose(list: Array):
 	
 	return list[index]
 	pass
+
+
+func print_screen() -> void:
+	var image = get_viewport().get_texture().get_data()
+	image.flip_y()
+	image.save_png("res://mockup.png")

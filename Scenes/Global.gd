@@ -20,6 +20,9 @@ onready var music_stream: AudioStreamPlayer = get_node("/root/SceneManager/Music
 func _ready() -> void:
 	set_stream_volume()
 
+func _input(event):
+	if event.is_action_pressed("ctrl"):
+		Utils.print_screen()
 
 # Set of functions for scene management and transition between scenes
 func set_scene(scene: String, fade: bool = true) -> void:
