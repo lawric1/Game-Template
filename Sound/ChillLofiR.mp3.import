@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/ChillLofiR.mp3-d36610f79956ab5dd36fadfd29ccebee.mp3str"
+path="res://.import/ChillLofiR.mp3-9d857611ccf945de3e8678bf34833eca.mp3str"
 
 [deps]
 
-source_file="res://Sound/ChillLofiR.mp3"
-dest_files=[ "res://.import/ChillLofiR.mp3-d36610f79956ab5dd36fadfd29ccebee.mp3str" ]
+source_file="res://sound/ChillLofiR.mp3"
+dest_files=[ "res://.import/ChillLofiR.mp3-9d857611ccf945de3e8678bf34833eca.mp3str" ]
 
 [params]
 

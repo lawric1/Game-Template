@@ -8,7 +8,7 @@ onready var tween: Tween = $Tween
 
 
 func _ready() -> void:
-	Utils.shake_camera = self
+	Utils.camera_shake = self
 	offset = get_viewport_rect().size / 2
 	current = true
 	

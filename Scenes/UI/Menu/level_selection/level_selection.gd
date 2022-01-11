@@ -4,6 +4,8 @@ export(Texture) var normal_icon_texture: Texture
 export(Texture) var selected_icon_texture: Texture
 
 var grid_icons: Array
+var active_icons: Array
+
 var current_selection_position := Vector2.ZERO
 var previous_selection_position := Vector2.ZERO
 var current_selection
@@ -11,7 +13,7 @@ var current_selection
 var row: int
 var col: int
 
-var icon_scene := load("res://Scenes/UI/Menu/Level Selection/LevelIcon.tscn")
+var icon_scene := load("res://scenes/ui/menu/level_selection/level_icon.tscn")
 
 
 func _ready() -> void:
@@ -60,12 +62,13 @@ func press_selected_button() -> void:
 	if current_selection is TextureRect:
 		Global.set_scene(current_selection.level_path)
 		
+		
 	if current_selection is Label:
-		Global.set_scene("res://Scenes/UI/Menu/Menu.tscn", false)
+		Global.set_scene("res://scenes/ui/menu/menu.tscn", false)
 		
 		
 func set_current_selection() -> void:
-	for icon in grid_icons:
+	for icon in active_icons:
 		if icon.grid_position == current_selection_position:
 			current_selection = icon
 
@@ -79,7 +82,7 @@ func set_current_selection() -> void:
 	
 
 func reset_selection_texture() -> void:
-	for icon in grid_icons:
+	for icon in active_icons:
 		icon.texture = normal_icon_texture
 		
 	$Back.add_color_override("font_color", Global.normal_button_color)
@@ -117,7 +120,7 @@ func find_row_col() -> Array:
 	
 	var positions: Array = []
 	
-	for icon in grid_icons:
+	for icon in active_icons:
 		positions.append(icon.grid_position)
 	
 	for pos in positions:
@@ -141,7 +144,16 @@ func generate_icons() -> void:
 		var icon = icon_scene.instance()
 		icon.grid_position = positions[i]
 		icon.level_path = Global.level_list.keys()[i]
+		icon.is_active = Global.level_list[icon.level_path]
 		
 		$GridContainer.add_child(icon)
 	
 	grid_icons = $GridContainer.get_children()
+	
+	for icon in grid_icons:
+		if icon.is_active:
+			active_icons.append(icon)
+			
+	
+	
+	

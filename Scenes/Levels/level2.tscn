@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/ui/pause_screen/pause_screen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/levels/level.gd" type="Script" id=3]
 
-[node name="Level1" type="Node2D"]
+[node name="Level2" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -18,7 +18,7 @@ __meta__ = {
 }
 
 [node name="icon" type="Sprite" parent="."]
-position = Vector2( 89.1894, 89.3154 )
+position = Vector2( 251.104, 114.714 )
 texture = ExtResource( 1 )
 
 [node name="PauseCanvas" parent="." instance=ExtResource( 2 )]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/ui/menu/level_selection/level_icon.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ui/menu/level_selection/level_icon3.png" type="Texture" id=2]
+
+[node name="1" type="TextureRect"]
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

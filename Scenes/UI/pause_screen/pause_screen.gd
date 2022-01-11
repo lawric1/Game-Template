@@ -1,4 +1,4 @@
-extends "res://Scenes/UI/Menu/UI_button_selection.gd"
+extends "res://scenes/ui/menu/ui_button_selection.gd"
 
 var pause_state := false
 
@@ -16,7 +16,7 @@ func press_selected_button() -> void:
 #		Global.set_scene("res://Scenes/Menu/Settings.tscn", false)
 		
 	elif selection_index == 1 and pause_state:
-		Global.set_scene("res://Scenes/UI/Menu/Menu.tscn")
+		Global.set_scene("res://scenes/ui/menu/menu.tscn")
 		pause_game()
 
 

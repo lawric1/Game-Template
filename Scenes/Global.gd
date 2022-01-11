@@ -7,10 +7,14 @@ var normal_button_color = Color("355570")
 var selected_button_color = Color("cccccc")
 
 var level_list := {
-	"res://Scenes/Levels/Level1.tscn": true,
+	"res://scenes/levels/level1.tscn": true,
+	"res://scenes/levels/level2.tscn": false,
+	"res://scenes/levels/level3.tscn": false,
+	
 }
 
 var current_scene: String
+var current_level
 
 onready var screen_transiton: CanvasLayer = get_node("/root/SceneManager/ScreenTransition")
 onready var scene_container: Node2D = get_node("/root/SceneManager/CurrentScene")
@@ -20,9 +24,11 @@ onready var music_stream: AudioStreamPlayer = get_node("/root/SceneManager/Music
 func _ready() -> void:
 	set_stream_volume()
 
+
 func _input(event):
 	if event.is_action_pressed("ctrl"):
 		Utils.print_screen()
+
 
 # Set of functions for scene management and transition between scenes
 func set_scene(scene: String, fade: bool = true) -> void:
@@ -47,6 +53,13 @@ func switch_scenes_without_fade() -> void:
 	
 	scene_container.add_child(load(current_scene).instance())
 
+
+func update_level_list():
+	var path = current_level.get_filename()
+	
+	if path in level_list.keys():
+		level_list[path] = true
+		print(level_list)
 
 # Helper function to play randomized sound effects
 func play_audio(audio_player: AudioStreamPlayer, sound_list: Array) -> void:

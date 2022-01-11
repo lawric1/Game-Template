@@ -1,6 +1,6 @@
 extends Node
 
-var shake_camera
+var camera_shake
 
 
 func show_collision_shapes() -> void:
@@ -42,3 +42,20 @@ func print_screen() -> void:
 	var image = get_viewport().get_texture().get_data()
 	image.flip_y()
 	image.save_png("res://mockup.png")
+
+#func list_files_in_directory(path: String) -> Array:
+#	var files = []
+#	var folder = Directory.new()
+#	folder.open(path)
+#	folder.list_dir_begin()
+#
+#	while true:
+#		var file = folder.get_next()
+#		if file == "":
+#			break
+#		elif not file.begins_with("."):
+#			files.append(file)
+#
+#	folder.list_dir_end()
+#
+#	return files

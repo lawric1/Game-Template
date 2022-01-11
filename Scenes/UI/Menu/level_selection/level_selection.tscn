@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scenes/UI/Menu/Level Selection/level_selection.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/UI/Menu/Level Selection/level icon2.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/UI/Menu/Level Selection/level icon.png" type="Texture" id=3]
+[ext_resource path="res://scenes/ui/menu/level_selection/level_selection.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ui/menu/level_selection/level_icon2.png" type="Texture" id=2]
+[ext_resource path="res://scenes/ui/menu/level_selection/level_icon.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/monogram dynamic.tres" type="DynamicFont" id=5]
 
 [node name="LevelSelection" type="Control"]

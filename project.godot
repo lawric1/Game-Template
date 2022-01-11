@@ -11,15 +11,15 @@ config_version=4
 [application]
 
 config/name="Puzzle game template"
-run/main_scene="res://Scenes/Scene Manager/SceneManager.tscn"
-boot_splash/image="res://Scenes/UI/Boot Screen/BootScreen.png"
+run/main_scene="res://scenes/scene_manager/scene_manager.tscn"
+boot_splash/image="res://scenes/ui/boot_screen/bootscreen.png"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
 
 [autoload]
 
-Global="*res://Scenes/Global.gd"
-Utils="*res://Scenes/Utils.gd"
+Global="*res://scenes/Global.gd"
+Utils="*res://scenes/Utils.gd"
 
 [debug]
 

@@ -37,10 +37,10 @@ func reset_button_colors() -> void:
 
 func press_selected_button() -> void:
 	if selection_index == 0:
-		Global.set_scene("res://Scenes/Levels/Level1.tscn")
+		Global.set_scene("res://scenes/levels/level1.tscn")
 	elif selection_index == 1:
-		Global.set_scene("res://Scenes/UI/Menu/Level Selection/LevelSelection.tscn", false)
+		Global.set_scene("res://scenes/ui/menu/level_selection/level_selection.tscn", false)
 	elif selection_index == 2:
-		Global.set_scene("res://Scenes/UI/Menu/Settings/Settings.tscn", false)
+		Global.set_scene("res://scenes/ui/menu/settings/settings.tscn", false)
 
 

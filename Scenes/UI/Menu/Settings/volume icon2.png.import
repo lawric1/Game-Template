@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/volume icon2.png-16ea55e799a3448363814d3df822164e.stex"
+path="res://.import/volume icon2.png-a652efd3c6392f63dc6f6f96a4222fb6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/Menu/Settings/volume icon2.png"
-dest_files=[ "res://.import/volume icon2.png-16ea55e799a3448363814d3df822164e.stex" ]
+source_file="res://scenes/ui/menu/settings/volume icon2.png"
+dest_files=[ "res://.import/volume icon2.png-a652efd3c6392f63dc6f6f96a4222fb6.stex" ]
 
 [params]
 

@@ -1,4 +1,4 @@
-extends "res://Scenes/UI/Menu/UI_button_selection.gd"
+extends "res://scenes/ui/menu/ui_button_selection.gd"
 
 var sprite_size := 10
 
@@ -38,4 +38,4 @@ func _input(event) -> void:
 	
 func press_selected_button() -> void:
 	if selection_index == 2:
-		Global.set_scene("res://Scenes/UI/Menu/Menu.tscn", false)
+		Global.set_scene("res://scenes/ui/menu/menu.tscn", false)
